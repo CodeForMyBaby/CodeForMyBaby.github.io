@@ -3,38 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Baby</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>I'm Sorry</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background-color: #f7e6e6;
+            color: #333;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .heart {
+            width: 300px;
+            height: 300px;
+            background-color: #ff6b81;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .heart::before, .heart::after {
+            content: '';
+            width: 300px;
+            height: 300px;
+            background-color: #ff6b81;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -150px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: -150px;
+        }
+
+        .message-container {
+            text-align: center;
+            z-index: 2;
+            position: relative;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ff6b81;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #ff6b81;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff4b61;
+        }
+
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Baby Special Page</h1>
-        <p>This page is dedicated to the most beautiful person in my eyes, my Baby!</p>
-    </header>
 
-    <section id="about">
-        <h2>About My Baby</h2>
-        <p>She is maarte pero love ko HAHAHAHA and she's pretty so much and i love her so much she is my baby.</p>
-    </section>
+    <div class="heart"></div>
 
-    <section id="gallery">
-        <h2>Our Favorite Moments Together</h2>
-        <div class="gallery">
-            <img src="Messenger_creation_B33528C0-3BC0-4540-987D-71FBC5893FD3" alt="Memory 1">
-            <img src="Messenger_creation_14416196-2193-4E6F-BDC3-3EE48BDB9B88" alt="Memory 2">
-            <img src="IMG_20240824_211555" alt="Memory 3">
-        </div>
-    </section>
+    <div class="message-container">
+        <h1>I'm Sorry,baby</h1>
+        <p>I know mali ako sa part na yun, inuna ko yung nararamdaman ko sorry.</p>
+        <p>Mahal na mahal kita, and I hate seeing you crying because of me.</p>
+        <p>Please forgive me, and let's make things better together.</p>
+        <button onclick="revealMessage()">Click me baby</button>
+        <p class="hidden-message">I promise to always make it up to you. I love you more than words can express. iloveyou baby ko 💖</p>
+    </div>
 
-    <section id="message">
-        <h2>A Special Message for You</h2>
-        <p>Hi baby sorry lagi kita inaaway pero love pa rin kita hehe eme pero sorry talaga and thankyou for staying lang u love me talaga naappreciate ko yung binibigay mong core and love super thankful ako baby ko iloveyouu mwaaa wg ka sana mag sawa sakin hehe.</p>
-    </section>
+    <script>
+        function revealMessage() {
+            document.querySelector('.hidden-message').style.display = 'block';
+        }
+    </script>
 
-    <footer>
-        <p>With Love, baby</p>
-    </footer>
-
-    <script src="scripts.js"></script>
 </body>
 </html>
